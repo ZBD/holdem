@@ -1,0 +1,13 @@
+{
+    "name" : "Holdem",
+    "description" : "A multiplayer Web game application of Texas Hold'em developed by Bindi Zhang",
+    "version" : "0.0.1",
+    "private" : true,
+    "dependencies" : {
+        "express" : "3.x",
+        "socket.io" : "0.9"
+    },
+    "engines" : {
+        "node" : "0.10.x"
+    }
+}
