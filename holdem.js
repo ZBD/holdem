@@ -14,6 +14,7 @@ function initGame(sio, socket) {
     gameSocket.emit('connected', {message: "You are connected!"});
 
     gameSocket.on('hostCreateNewGame', hostCreateNewGame);
+    gameSocket.on('hostStartGame', hostStartGame);
     gameSocket.on('hostNextRound', hostNextRound);
 
     gameSocket.on('playerJoinGame', playerJoinGame);
@@ -40,9 +41,19 @@ function hostCreateNewGame() {
 };
 
 /**
- * 
- *
+ * host prepare the game 
+ * Every player gets his hands of poker(2 cards), host gets 5 cards
  */
+function hostStartGame(gameId) {
+    var sock = this;
+    var data = {
+        mySocketId: sock.id,
+        gameId: gameId
+        };
+
+    this.emit('newGameStarted', deck.getHostCards);
+    io.sockets.in(data.gameId).emit('beginNewGame', data);
+}
 
 
 exports.initGame = initGame;
