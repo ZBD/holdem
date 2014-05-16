@@ -216,6 +216,8 @@ var deck = [
     }
     ];
 
+var tableCards;
+
 function shuffle() {
     var i, j, tmp;
     for (i=0; i<deck.length; i++) {
@@ -227,10 +229,21 @@ function shuffle() {
     return deck;
 }
 
+function getTableCards() {
+    var card1 = deck.pop();
+    var card2 = deck.pop();
+    var card3 = deck.pop();
+    var card4 = deck.pop();
+    var card5 = deck.pop();
+    tableCards = [card1, card2, card3, card4, card5];
+    return tableCards;
+}
+
 console.log("Before shuffle");
 console.log(deck);
 console.log("\nAfter shuffle");
 console.log(shuffle());
+console.log(getTableCards());
 
 exports.shuffle = shuffle;
 exports.deck = deck;
