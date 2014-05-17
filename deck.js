@@ -5,7 +5,9 @@ var deck = ["2H", "3H", "4H", "5H", "6H", "7H", "8H", "9H", "10H", "JH", "QH", "
             "2C", "3C", "4C", "5C", "6C", "7C", "8C", "9C", "10C", "JC", "QC", "KC", "AC"
             ];
             */
-var deck = [
+var deck;
+function getDeck() {
+  deck = [
     {
         "number" : 2,
         "type" : "Heart"
@@ -215,6 +217,8 @@ var deck = [
         "type" : "Club" 
     }
     ];
+   return deck;
+}
 
 var tableCards;
 
@@ -239,11 +243,20 @@ function getTableCards() {
     return tableCards;
 }
 
+
+function getPlayerCards() {
+    var card1 = deck.pop();
+    var card2 = deck.pop();
+    return [card1, card2];
+}
+
+getDeck();
 console.log("Before shuffle");
 console.log(deck);
 console.log("\nAfter shuffle");
 console.log(shuffle());
 console.log(getTableCards());
+console.log(getPlayerCards());
 
 exports.shuffle = shuffle;
-exports.deck = deck;
+exports.getDeck = getDeck;
