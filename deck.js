@@ -250,6 +250,27 @@ function getPlayerCards() {
     return [card1, card2];
 }
 
+function valueCard(playerCards) {
+    //High card
+
+    //Pair
+
+    //Two Pair
+
+    //3 of a Kind
+
+    //Straight
+
+    //Flush
+
+    //Full House
+
+    //4 of a Kind
+
+    //Straight Flush
+
+}
+
 getDeck();
 console.log("Before shuffle");
 console.log(deck);
