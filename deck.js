@@ -250,7 +250,7 @@ function getPlayerCards() {
     return [card1, card2];
 }
 
-function valueCard(playerCards) {
+function evaluateHand(playerHand) {
     //High card
 
     //Pair
