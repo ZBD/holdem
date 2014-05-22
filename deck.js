@@ -272,12 +272,14 @@ function evaluateHand(playerHand) {
 }
 
 getDeck();
+/*
 console.log("Before shuffle");
 console.log(deck);
 console.log("\nAfter shuffle");
 console.log(shuffle());
 console.log(getTableCards());
 console.log(getPlayerCards());
+*/
 
 exports.shuffle = shuffle;
 exports.getDeck = getDeck;

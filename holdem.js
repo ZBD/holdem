@@ -2,7 +2,6 @@ var deck = require('./deck.js');
 
 var io;
 var gameSocket;
-
 /**
  * init the holdem game
  * set up message listener
